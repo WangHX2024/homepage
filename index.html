@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="particles-js"></div>
+
+    <!-- 控制按钮 -->
+    <div class="controls">
+        <button class="control-btn" id="colorToggle">🎨</button>
+        <button class="control-btn" id="themeToggle">🌙</button>
+        <button class="control-btn" id="langToggle">🌐</button>
+    </div>
+
+    <!-- 调色盘面板 -->
+    <div class="color-palette" id="colorPalette">
+        <div class="palette-header">
+            <span id="paletteTitle"></span>
+        </div>
+        <div class="color-options">
+            <div class="color-option active" data-theme="default">
+                <div class="color-preview">
+                    <div class="color-circle" style="background: #1a1d29;"></div>
+                    <div class="color-circle" style="background: #0288d1;"></div>
+                    <div class="color-circle" style="background: #4a5568;"></div>
+                </div>
+                <span id="colorDefault"></span>
+            </div>
+            <div class="color-option" data-theme="emerald">
+                <div class="color-preview">
+                    <div class="color-circle" style="background: #065f46;"></div>
+                    <div class="color-circle" style="background: #10b981;"></div>
+                    <div class="color-circle" style="background: #374151;"></div>
+                </div>
+                <span id="colorEmerald"></span>
+            </div>
+            <div class="color-option" data-theme="purple">
+                <div class="color-preview">
+                    <div class="color-circle" style="background: #581c87;"></div>
+                    <div class="color-circle" style="background: #a855f7;"></div>
+                    <div class="color-circle" style="background: #4c1d95;"></div>
+                </div>
+                <span id="colorPurple"></span>
+            </div>
+            <div class="color-option" data-theme="rose">
+                <div class="color-preview">
+                    <div class="color-circle" style="background: #881337;"></div>
+                    <div class="color-circle" style="background: #f43f5e;"></div>
+                    <div class="color-circle" style="background: #7f1d1d;"></div>
+                </div>
+                <span id="colorRose"></span>
+            </div>
+            <div class="color-option" data-theme="amber">
+                <div class="color-preview">
+                    <div class="color-circle" style="background: #92400e;"></div>
+                    <div class="color-circle" style="background: #f59e0b;"></div>
+                    <div class="color-circle" style="background: #78350f;"></div>
+                </div>
+                <span id="colorAmber"></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 语言选择面板 -->
+    <div class="language-palette" id="languagePalette">
+        <div class="palette-header">
+            <span id="languageTitle">Choose Language</span>
+        </div>
+        <div class="language-options">
+            <div class="language-option active" data-lang="en">
+                <div class="language-flag">🇺🇸</div>
+                <span class="language-name">English</span>
+            </div>
+            <div class="language-option" data-lang="zh">
+                <div class="language-flag">🇨🇳</div>
+                <span class="language-name">中文</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="avatar">
+            <img src="./photo.jpg" alt="我的头像">
+        </div>
+        
+        <!-- 基本信息 -->
+        <div class="basic-info">
+            <h1 id="nameText"></h1>
+            <p class="title" id="titleText"></p>
+            <p class="subtitle" id="subtitleText"></p>
+        </div>
+
+        <!-- 联系信息 -->
+        <div class="contact-info">
+            <!--<div class="info-item">-->
+            <!--    <i class="fas fa-phone info-icon"></i>-->
+            <!--    <div class="info-content">-->
+            <!--        <span class="info-label" id="phoneLabel"></span>-->
+            <!--        <span class="info-value" id="phoneValue"></span>-->
+            <!--    </div>-->
+            <!--</div>-->
+            
+            <div class="info-item">
+                <i class="fas fa-envelope info-icon"></i>
+                <div class="info-content">
+                    <span class="info-label" id="emailLabel"></span>
+                    <span class="info-value">wanghaoxiong@zju.edu.cn</span>
+                </div>
+            </div>
+            
+            <div class="info-item">
+                <i class="fas fa-map-marker-alt info-icon"></i>
+                <div class="info-content">
+                    <span class="info-label" id="locationLabel"></span>
+                    <span class="info-value" id="locationValue"></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 社交链接 -->
+        <div class="social-links">
+            <a href="http://note.haoxiong.wang" target="_blank" class="social-link">
+                <i class="fas fa-home"></i>
+                <span id="homeLink"></span>
+            </a>
+            <a href="https://classnote.haoxiong.wang" target="_blank" class="social-link">
+                <i class="fas fa-book"></i>
+                <span id="notesLink"></span>
+            </a>
+        </div>
+    </div>
+    <div class="footer">
+        <span id="copyrightText"></span>
+        <a href="https://beian.miit.gov.cn" id="licenseLink"></a>
+        <span id="updateText"></span>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -7,6 +7,7 @@ const translations = {
         // phoneLabel: "电话",
         // phoneValue: "+86-***********",
         emailLabel: "邮箱",
+        wechatLabel: "微信",
         locationLabel: "地址",
         locationValue: "中国浙江省杭州市西湖区浙大路38号 310000",
         homeLink: "个人主页",
@@ -29,6 +30,7 @@ const translations = {
         // phoneLabel: "Phone",
         // phoneValue: "+86-***********,
         emailLabel: "Email",
+        wechatLabel: "WeChat",
         locationLabel: "Address",
         locationValue: "38 Zheda Road, Xihu District, Hangzhou, Zhejiang, China 310000",
         homeLink: "Homepage",
@@ -82,6 +84,7 @@ function updateLanguage() {
     // document.getElementById('phoneLabel').textContent = lang.phoneLabel;
     // document.getElementById('phoneValue').textContent = lang.phoneValue;
     document.getElementById('emailLabel').textContent = lang.emailLabel;
+    document.getElementById('wechatLabel').textContent = lang.wechatLabel;
     document.getElementById('locationLabel').textContent = lang.locationLabel;
     document.getElementById('locationValue').textContent = lang.locationValue;
     

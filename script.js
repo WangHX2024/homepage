@@ -50,7 +50,7 @@ const translations = {
 
 // 状态变量
 let currentLang = localStorage.getItem('language') || 'en';
-let isDarkMode = localStorage.getItem('darkMode') === 'false';
+let isDarkMode = localStorage.getItem('darkMode') === 'true';
 let currentColorTheme = localStorage.getItem('colorTheme') || 'default';
 
 // 初始化主题

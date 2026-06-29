@@ -336,7 +336,7 @@ function initVisitorMap() {
 }
 
 // 页面加载完成后初始化
-document.addEventListener('DOMContentLoaded', function() {
+function initAll() {
     initTheme();
     initColorTheme();
     initLanguage();
@@ -425,4 +425,12 @@ document.addEventListener('DOMContentLoaded', function() {
         card.style.boxShadow = '0 8px 25px rgba(0, 0, 0, 0.12)';
         card.style.setProperty('--reflection-opacity', '0');
     });
-});
+}
+
+// 如果 DOMContentLoaded 尚未触发则等待，否则直接执行
+// (防止 Cloudflare Rocket Loader 延迟脚本导致事件错过)
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initAll);
+} else {
+    initAll();
+}

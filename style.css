@@ -718,7 +718,9 @@ body {
     right: 20px;
     z-index: 998;
     width: 200px;
-    overflow: hidden;
+    min-width: 200px;
+    flex-shrink: 0;
+    border-radius: 8px;
     background: var(--bg-color);
     backdrop-filter: blur(15px) saturate(180%);
     -webkit-backdrop-filter: blur(15px) saturate(180%);
@@ -728,11 +730,10 @@ body {
         inset 0 1px 0 var(--glass-inner-border);
 }
 
-#visitor-map-wrapper iframe,
-#visitor-map-wrapper > div,
-#visitor-map-wrapper > a {
-    width: 100% !important;
-    display: block !important;
+#visitor-map-wrapper #mapmyvisitors-widget {
+    width: 200px !important;
+    min-width: 200px;
+    display: block;
 }
 
 @media (max-width: 768px) {

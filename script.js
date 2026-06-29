@@ -321,6 +321,20 @@ function initParticles() {
     });
 }
 
+// 加载访问统计（延迟到 DOM 就绪，避免 flex 布局下宽度被压缩）
+function initVisitorMap() {
+    const wrapper = document.getElementById('visitor-map-wrapper');
+    if (!wrapper || wrapper.querySelector('#mapmyvisitors')) {
+        return;
+    }
+
+    const script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.id = 'mapmyvisitors';
+    script.src = 'https://mapmyvisitors.com/map.js?cl=ffffff&w=200&t=tt&d=_-PDAf7dphCh7QdADyU4t9BFLa8vXenMcKzHioNH8hA&co=2d78ad&ct=ffffff&cmo=3acc3a&cmn=ff5353';
+    wrapper.appendChild(script);
+}
+
 // 页面加载完成后初始化
 document.addEventListener('DOMContentLoaded', function() {
     initTheme();
@@ -328,6 +342,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initLanguage();
     updateLanguage();
     initParticles();
+    initVisitorMap();
 
     // 绑定调色盘事件监听器
     const colorToggle = document.getElementById('colorToggle');

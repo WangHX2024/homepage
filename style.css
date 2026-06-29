@@ -721,9 +721,7 @@ body {
     min-width: 200px;
     flex-shrink: 0;
     border-radius: 8px;
-    background: var(--bg-color);
-    backdrop-filter: blur(15px) saturate(180%);
-    -webkit-backdrop-filter: blur(15px) saturate(180%);
+    background: transparent;
     border: 1px solid var(--glass-border);
     box-shadow:
         0 4px 16px rgba(0, 0, 0, 0.1),

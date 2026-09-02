@@ -7,3 +7,18 @@
 @media(max-width:700px){.education-entry{grid-template-columns:52px 1fr;gap:14px}.education-entry>img{width:46px;height:46px}.education-entry>time{grid-column:2;grid-row:1;justify-self:end;font-size:11px}.education-entry>div{grid-column:2}.education-entry h3{padding-right:110px}}
 .education-entry>img{height:auto;object-fit:initial}
 .chinese-name{font-size:.58em;font-weight:400;white-space:nowrap}
+
+.section-heading{display:flex;align-items:center;gap:10px}
+.section-heading svg{width:23px;height:23px;flex:none;color:var(--accent);fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+
+/* Keep each contact link intact while allowing the list to wrap on narrow screens. */
+.links{flex-wrap:wrap;gap:4px 0}
+.links span{display:flex;white-space:nowrap;color:inherit}
+.links span+span:before{content:"/";margin:0 10px;color:#bbb}
+
+@media(max-width:700px){
+  .links{column-gap:16px}
+  .links span+span:before{content:none}
+  .education-entry{grid-template-columns:52px minmax(0,1fr)}
+  .education-entry>div{grid-row:1}
+}
